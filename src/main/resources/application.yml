@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: simple-spring-boot-demo
+
+server:
+  port: 8888
