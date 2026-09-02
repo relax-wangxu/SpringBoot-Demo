@@ -61,3 +61,24 @@ mvn -version
 ```
 
 输出中的 Maven 版本应为 `3.9.16`，Java 版本应为 `21`。
+
+## Docker 运行
+
+在项目根目录构建镜像：
+
+```bash
+docker build -t simple-spring-boot-demo:v1 .
+```
+
+启动容器，将容器的 8888 端口映射到本机 8888 端口：
+
+```bash
+docker run --rm --name simple-spring-boot-demo -p 8888:8888 simple-spring-boot-demo:v1
+```
+
+验证服务：
+
+```bash
+curl http://localhost:8888/
+curl http://localhost:8888/health
+```
